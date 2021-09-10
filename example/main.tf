@@ -14,5 +14,3 @@ provider "alicloud" {
 module "example" {
   source = "../"
 }
-
-
