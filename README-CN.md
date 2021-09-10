@@ -18,10 +18,10 @@ terraform-alicloud-vpc-privatelink-connection
 ## 用法
 
 ```hcl
-module "vpc-privatelink-connection" {
-  source            = "terraform-alicloud-modules/vpc-privatelink-connection/alicloud"
-  vpc_name          = "terraformTestVpcName"
-  vpc_cidr_block    = "terraformTestVpcCidrBlock"
+module "example" {
+  source                    = "terraform-alicloud-modules/vpc-privatelink-connection/alicloud"
+  vpc_name                  = "terraformTestVpcName"
+  vpc_cidr_block            = "terraformTestVpcCidrBlock"
   vpc_privatelink_bandwidth = "1024"
 }
 ```
