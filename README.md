@@ -18,7 +18,7 @@ These types of resources are supported:
 ## Usage
 
 ```hcl
-module "vpc-privatelink-connection" {
+module "example" {
   source                    = "terraform-alicloud-modules/vpc-privatelink-connection/alicloud"
   vpc_name                  = "terraformTestVpcName"
   vpc_cidr_block            = "terraformTestVpcCidrBlock"
