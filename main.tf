@@ -11,8 +11,8 @@ resource "alicloud_security_group" "default" {
 
 resource "alicloud_privatelink_vpc_endpoint_service" "default" {
   service_description    = var.vpc_privatelink_endpoint_service_description
-  connect_bandwidth      = 103
-  auto_accept_connection = false
+  connect_bandwidth      = var.connect_bandwidth
+  auto_accept_connection = var.auto_accept_connection
 }
 
 resource "alicloud_privatelink_vpc_endpoint" "default" {
@@ -20,7 +20,6 @@ resource "alicloud_privatelink_vpc_endpoint" "default" {
   vpc_id             = alicloud_vpc.default.id
   security_group_ids = [alicloud_security_group.default.id]
   vpc_endpoint_name  = var.vpc_privatelink_endpoint_name
-  depends_on         = [alicloud_privatelink_vpc_endpoint_service.default]
 }
 
 resource "alicloud_privatelink_vpc_endpoint_connection" "default" {
