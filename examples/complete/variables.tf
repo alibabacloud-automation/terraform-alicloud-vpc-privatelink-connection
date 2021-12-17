@@ -4,7 +4,7 @@
 variable "vpc_name" {
   description = "The name of the VPC."
   type        = string
-  default     = ""
+  default     = "tf-testAccVpcName"
 }
 
 variable "vpc_cidr_block" {
@@ -14,12 +14,27 @@ variable "vpc_cidr_block" {
 }
 
 ##############################################################
+#variables for alicloud_security_group
+##############################################################
+variable "vpc_security_group_name" {
+  description = "The security group name of the VPC."
+  type        = string
+  default     = "tf-testAccVpcSecurityGroupName"
+}
+
+variable "vpc_security_group_description" {
+  description = "The security group description of the VPC."
+  type        = string
+  default     = "tf-testAccVpcSecurityGroupDescription"
+}
+
+##############################################################
 #variables for alicloud_privatelink_vpc_endpoint_service
 ##############################################################
 variable "vpc_privatelink_endpoint_service_description" {
   description = "The description of the VPC privatelink service."
   type        = string
-  default     = ""
+  default     = "tf-testAccVpcPrivatelinkServiceDescription"
 }
 
 variable "connect_bandwidth" {
@@ -40,7 +55,7 @@ variable "auto_accept_connection" {
 variable "vpc_privatelink_endpoint_name" {
   description = "The name of the VPC privatelink."
   type        = string
-  default     = ""
+  default     = "tf-testAccVpcPrivatelinkName"
 }
 
 ##############################################################
@@ -49,20 +64,5 @@ variable "vpc_privatelink_endpoint_name" {
 variable "vpc_privatelink_bandwidth" {
   description = "The bandwidth of VPC privatelink."
   type        = string
-  default     = ""
-}
-
-##############################################################
-#variables for alicloud_security_group
-##############################################################
-variable "vpc_security_group_name" {
-  description = "The security group name of the VPC."
-  type        = string
-  default     = ""
-}
-
-variable "vpc_security_group_description" {
-  description = "The security group description of the VPC."
-  type        = string
-  default     = ""
+  default     = "0"
 }
