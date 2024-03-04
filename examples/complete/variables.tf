@@ -40,7 +40,7 @@ variable "vpc_privatelink_endpoint_service_description" {
 variable "connect_bandwidth" {
   description = " The connection bandwidth."
   type        = number
-  default     = 0
+  default     = 103
 }
 
 variable "auto_accept_connection" {
@@ -64,5 +64,5 @@ variable "vpc_privatelink_endpoint_name" {
 variable "vpc_privatelink_bandwidth" {
   description = "The bandwidth of VPC privatelink."
   type        = string
-  default     = "0"
+  default     = "1024"
 }
